@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Search Result</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-light">
+    <div class="container py-4">
+      <h1 class="mb-4 fw-bold">検索結果</h1>
+
+      <% if (blogs.length === 0) { %>
+        <p class="text-secondary">一致する記事がありませんでした。</p>
+      <% } %>
+
+      <% blogs.forEach(blog => { %>
+        <div class="card mb-3 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title"><%= blog.title %></h5>
+            <small class="text-muted"><%= blog.date %></small>
+            <p class="mt-2"><%= blog.content %></p>
+          </div>
+        </div>
+      <% }) %>
+
+      <a href="/" class="btn btn-secondary mt-3 w-100">メインページへ戻る</a>
+    </div>
+  </body>
+</html>
+

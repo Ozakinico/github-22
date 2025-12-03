@@ -1,0 +1,18 @@
+<!-- views/update.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UPDATE</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>学生情報修正</h1>
+    <form action="/update" method="POST">
+      ID:<input type="number" name="id" required /><br />
+      氏名:<input type="text" name="name" required /><br />
+      学籍番号:<input type="number" name="studentNum" required /><br />
+      学年:<input type="number" name="grade" required /><br />
+      <button type="submit">修正</button>
+    </form>
+  </body>
+</html>

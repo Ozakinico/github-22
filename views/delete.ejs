@@ -1,0 +1,21 @@
+<!-- views/delete.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DELETE</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>学生情報削除</h1>
+    <form action="/delete" method="POST">
+      ID:<input type="number" name="id" required /><br />
+      <button type="submit">削除</button>
+    </form>
+
+    <hr />
+    <p>
+      すべて削除したい場合は
+      <a href="/delete/all">こちら</a>
+    </p>
+  </body>
+</html>
